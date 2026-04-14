@@ -10,7 +10,7 @@ export default function MapSection() {
               Ubicación
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              ¿Cómo llegar?
+              Ubicación del Salón de Fiestas en Querétaro
             </h2>
             <p className="text-gray-600 text-lg mb-2">
               Calle Diamante 6, Col. El Tepetate, Santiago de Querétaro, Qro.

@@ -39,9 +39,11 @@ export default function Hero() {
           />
         </div>
 
-        {/* H1 visible para SEO — diseñado para encajar en el hero */}
-        <h1 className="sr-only">
-          Terraza Diamante — Salón de Fiestas Infantiles en Querétaro
+        {/* H1 visible — keyword principal para SEO */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white text-center leading-tight mb-6 drop-shadow-lg">
+          Salón de Fiestas Infantiles
+          <br />
+          <span className="text-diamante-gold">en Querétaro</span>
         </h1>
 
         {/* Location badge */}

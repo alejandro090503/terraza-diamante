@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 const faqs = [
   {
     question: "¿Cuáles son los horarios de la terraza?",
@@ -46,8 +42,6 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section id="faq" className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +50,8 @@ export default function FAQ() {
             Preguntas Frecuentes
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            ¿Tienes <span className="text-diamante-blue">dudas?</span>
+            Preguntas Frecuentes —{" "}
+            <span className="text-diamante-blue">Terraza Diamante Querétaro</span>
           </h2>
           <p className="text-gray-600 text-lg">
             Aquí respondemos las preguntas más comunes de nuestros clientes.
@@ -64,34 +59,23 @@ export default function FAQ() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-diamante-purple/30"
+          {faqs.map((faq) => (
+            <details
+              key={faq.question}
+              className="group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-diamante-purple/30"
             >
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
-                className="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors"
-              >
+              <summary className="flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors cursor-pointer list-none">
                 <span className="font-heading font-bold text-gray-900 pr-4">
                   {faq.question}
                 </span>
-                <span
-                  className={`text-diamante-purple text-2xl transition-transform duration-300 shrink-0 ${
-                    openIndex === index ? "rotate-45" : ""
-                  }`}
-                >
+                <span className="text-diamante-purple text-2xl transition-transform duration-300 shrink-0 group-open:rotate-45">
                   +
                 </span>
-              </button>
-              {openIndex === index && (
-                <div className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
-            </div>
+              </summary>
+              <div className="px-6 pb-6">
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            </details>
           ))}
         </div>
       </div>

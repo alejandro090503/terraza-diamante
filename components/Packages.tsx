@@ -69,9 +69,9 @@ export default function Packages() {
               Paquetes y Precios
             </span>
             <h2 className="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Elige el paquete
+              Paquetes y Precios
               <br />
-              <span className="text-diamante-pink">ideal para ti</span>
+              <span className="text-diamante-pink">Salón de Fiestas Querétaro</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Todos los paquetes incluyen 8 horas de evento. Aparta tu fecha con

@@ -14,9 +14,9 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://terraza-diamante.vercel.app"),
-  title: "Terraza Diamante | Salón de Fiestas Infantiles en Querétaro",
+  title: "Salón de Fiestas Infantiles en Querétaro | Terraza Diamante",
   description:
-    "Salón de fiestas en Querétaro con terraza techada, inflables y decoración. Hasta 100 personas. Aparta tu fecha con $1,000. ¡Contáctanos por WhatsApp!",
+    "Salón de fiestas infantiles en Querétaro con terraza techada, inflables y estacionamiento. Paquetes desde $5,200 MXN. Aparta tu fecha con solo $1,000.",
   alternates: {
     canonical: "https://terraza-diamante.vercel.app/",
   },
@@ -52,20 +52,64 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "EventVenue",
+  "@type": ["EventVenue", "LocalBusiness"],
   name: "Terraza Diamante",
   description:
-    "Salón de fiestas en Querétaro con terraza techada, inflables, mobiliario completo y decoración. Ideal para fiestas infantiles, XV años, graduaciones y más.",
+    "Salón de fiestas infantiles en Querétaro con terraza techada, inflables, mobiliario completo y estacionamiento. Ideal para cumpleaños infantiles, XV años, graduaciones y baby showers.",
   url: "https://terraza-diamante.vercel.app",
   telephone: "+52-442-111-8867",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Calle Diamante 6",
     addressLocality: "Santiago de Querétaro",
     addressRegion: "Querétaro",
+    postalCode: "76030",
     addressCountry: "MX",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 20.5888,
+    longitude: -100.3899,
+  },
+  hasMap: "https://maps.google.com/?q=Calle+Diamante+6,+El+Tepetate,+Santiago+de+Queretaro,+Qro",
   image: "https://terraza-diamante.vercel.app/Logo.png",
   priceRange: "$$",
+  currenciesAccepted: "MXN",
+  paymentAccepted: "Cash, Bank Transfer",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.6",
+    reviewCount: "28",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Paquetes Terraza Diamante",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Paquete Básico",
+        price: "5200",
+        priceCurrency: "MXN",
+        description: "Terraza techada, mobiliario para 50 personas, 8 horas de evento, estacionamiento",
+      },
+      {
+        "@type": "Offer",
+        name: "Paquete Diamante",
+        price: "5700",
+        priceCurrency: "MXN",
+        description: "Terraza techada, mobiliario para 80 personas, 8 horas de evento, estacionamiento",
+      },
+      {
+        "@type": "Offer",
+        name: "Paquete Premium",
+        price: "6800",
+        priceCurrency: "MXN",
+        description: "Terraza techada, mobiliario para 100 personas, 8 horas de evento, inflable incluido, invitación digital",
+      },
+    ],
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -81,8 +125,8 @@ const localBusinessSchema = {
     },
   ],
   sameAs: [
-    "https://www.facebook.com/terrazadiamante",
-    "https://www.instagram.com/terrazadiamante",
+    "https://www.facebook.com/TerrazaDiamante6/",
+    "https://www.instagram.com/terraza.diamante/",
   ],
 };
 
@@ -103,7 +147,23 @@ const faqSchema = {
       name: "¿Puedo decorar el día antes de mi evento?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "¡Sí! Puedes instalar toda tu decoración un día antes del evento y dejarla lista.",
+        text: "¡Sí! Puedes instalar toda tu decoración un día antes del evento y dejarla lista. Así el día de la fiesta llegas con todo listo para disfrutar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Tienen equipo de sonido?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No contamos con equipo de sonido propio. El cliente puede traer su propio equipo o contratar un servicio externo de DJ o sonido.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo traer mi propio servicio de comida?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "¡Claro que sí! Contamos con espacio disponible para servicios externos como taquizas, carnitas, bufet y más. Tú eliges el servicio de comida de tu preferencia.",
       },
     },
     {
@@ -128,6 +188,14 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Sí, contamos con inflable. Viene incluido en el Paquete Premium y disponible como servicio adicional para otros paquetes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué colores de cubremanteles tienen disponibles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tenemos una amplia variedad de colores en cubremanteles. Tú eliges el color que combine con tu evento, ¡incluso puedes combinar varios colores!",
       },
     },
   ],

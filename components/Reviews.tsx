@@ -92,9 +92,9 @@ export default function Reviews() {
               Reseñas
             </span>
             <h2 className="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Lo que dicen en
+              Reseñas de nuestros
               <br />
-              <span className="text-diamante-gold">Google Maps</span>
+              <span className="text-diamante-gold">clientes en Querétaro</span>
             </h2>
             <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-5 py-2.5 shadow-sm mt-2">
               <svg viewBox="0 0 48 48" className="w-5 h-5">

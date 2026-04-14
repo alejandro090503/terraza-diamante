@@ -61,13 +61,12 @@ export default function Services() {
               Nuestros Servicios
             </span>
             <h2 className="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Todo lo que incluye
+              Servicios incluidos en tu
               <br />
-              <span className="text-diamante-purple">tu evento</span>
+              <span className="text-diamante-purple">salón de fiestas en Querétaro</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Un espacio pensado para que tú y tus invitados disfruten sin
-              preocupaciones.
+              Terraza Diamante es el salón de fiestas infantiles en Querétaro ideal para que tú y tus invitados disfruten sin preocupaciones. Ubicados en Santiago de Querétaro, ofrecemos espacio, mobiliario y todo lo necesario para tu celebración.
             </p>
           </div>
         </AnimateIn>
