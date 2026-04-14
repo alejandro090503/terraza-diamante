@@ -16,7 +16,35 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://terraza-diamante.vercel.app"),
   title: "Terraza Diamante | Salón de Fiestas Infantiles en Querétaro",
   description:
-    "El mejor salón para fiestas infantiles en Querétaro. Inflables, sonido, decoración y más. ¡Haz tu fiesta inolvidable!",
+    "El mejor salón para fiestas infantiles en Querétaro. Inflables, decoración y más. ¡Haz tu fiesta inolvidable!",
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    url: "https://terraza-diamante.vercel.app",
+    siteName: "Terraza Diamante",
+    title: "Terraza Diamante | Salón de Fiestas Infantiles en Querétaro",
+    description:
+      "El mejor salón para fiestas infantiles en Querétaro. Terraza techada, inflables, decoración y más.",
+    images: [
+      {
+        url: "/Logo.png",
+        width: 800,
+        height: 800,
+        alt: "Terraza Diamante - Salón de Fiestas Infantiles",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terraza Diamante | Salón de Fiestas Infantiles en Querétaro",
+    description:
+      "El mejor salón para fiestas infantiles en Querétaro. Terraza techada, inflables, decoración y más.",
+    images: ["/Logo.png"],
+  },
+  icons: {
+    icon: "/Logo.png",
+    apple: "/Logo.png",
+  },
 };
 
 export const viewport: Viewport = {
