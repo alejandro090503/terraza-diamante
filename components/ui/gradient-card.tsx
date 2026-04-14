@@ -1,35 +1,72 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-/**
- * GradientCard — animated blob gradient background that works at ANY size.
- * Uses the same color palette as the hero's BackgroundGradientAnimation.
- * Wrap any card or section content with this component.
- */
 export function GradientCard({
   children,
   className,
   containerClassName,
+  interactive = true,
 }: {
   children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
+  interactive?: boolean;
 }) {
   const [isSafari, setIsSafari] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const interactiveRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number>(0);
+  const curPos = useRef({ x: 0, y: 0 });
+  const tgPos = useRef({ x: 0, y: 0 });
+
   useEffect(() => {
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
   }, []);
 
+  // Initialize pointer blob to card center on mount
+  useEffect(() => {
+    if (!interactive || !containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    curPos.current = { x: rect.width / 2, y: rect.height / 2 };
+    tgPos.current = { x: rect.width / 2, y: rect.height / 2 };
+  }, [interactive]);
+
+  // Continuous RAF loop — smooth easing toward mouse target
+  useEffect(() => {
+    if (!interactive) return;
+    function tick() {
+      curPos.current.x += (tgPos.current.x - curPos.current.x) / 20;
+      curPos.current.y += (tgPos.current.y - curPos.current.y) / 20;
+      if (interactiveRef.current) {
+        interactiveRef.current.style.transform = `translate(${Math.round(curPos.current.x)}px, ${Math.round(curPos.current.y)}px)`;
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    }
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [interactive]);
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    tgPos.current = {
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+    };
+  };
+
   return (
     <div
+      ref={containerRef}
+      onMouseMove={interactive ? handleMouseMove : undefined}
       className={cn(
         "relative overflow-hidden",
         "bg-[linear-gradient(135deg,rgb(76,29,149),rgb(45,10,100))]",
         containerClassName
       )}
     >
-      {/* Blob layer — percentage-based origins so they work at any size */}
+      {/* Blob layer */}
       <div
         className={cn(
           "absolute inset-0",
@@ -72,6 +109,19 @@ export function GradientCard({
           "[mix-blend-mode:hard-light] [transform-origin:70%_20%]",
           "animate-gradient-fifth opacity-100"
         )} />
+        {/* Interactive pointer blob */}
+        {interactive && (
+          <div
+            ref={interactiveRef}
+            className={cn(
+              "absolute w-[60%] h-[60%]",
+              "[background:radial-gradient(circle_at_center,rgba(236,72,153,0.8)_0,transparent_55%)]",
+              "[mix-blend-mode:hard-light]",
+              "-translate-x-1/2 -translate-y-1/2",
+              "opacity-70"
+            )}
+          />
+        )}
       </div>
 
       {/* Content sits above blobs */}

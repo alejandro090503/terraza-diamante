@@ -39,6 +39,16 @@ const faqs = [
     answer:
       "Tenemos una amplia variedad de colores en cubremanteles. Tú eliges el color que combine con tu evento, ¡incluso puedes combinar varios colores!",
   },
+  {
+    question: "¿Puedo solicitar una cotización si ningún paquete se ajusta a mis invitados?",
+    answer:
+      "¡Claro que sí! Si ninguno de nuestros paquetes se adapta exactamente al número de personas que esperas, con gusto te hacemos una cotización personalizada. Solo escríbenos por WhatsApp indicando cuántos invitados serán y te enviamos una propuesta a la medida de tu evento.",
+  },
+  {
+    question: "¿El precio es el mismo cualquier día de la semana?",
+    answer:
+      "Los sábados tienen mayor demanda y corresponden a los precios que aparecen en nuestros paquetes. Si tu evento es entre lunes y viernes o en domingo, el costo puede ser menor. Contáctanos con tu fecha y te damos la tarifa exacta sin compromiso.",
+  },
 ];
 
 export default function FAQ() {

@@ -44,6 +44,12 @@ const services = [
       "Puedes instalar toda tu decoración el día anterior al evento. Llega el día de la fiesta con todo listo.",
   },
   {
+    icon: "🚻",
+    title: "Baños Limpios y Abastecidos",
+    description:
+      "Los baños se entregan completamente limpios y abastecidos para tu evento. Tus invitados siempre encontrarán higiene y confort.",
+  },
+  {
     icon: "💰",
     title: "Aparta con Solo $1,000",
     description:
