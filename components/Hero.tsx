@@ -16,20 +16,20 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
 
-        {/* ── LOGO ── centrado, con aura y float animation */}
-        <div className="mb-8 relative">
+        {/* ── LOGO ── centrado, grande, responsivo */}
+        <div className="mb-10 relative">
           {/* Glow ring detrás del logo */}
-          <div className="absolute inset-0 rounded-full bg-white/20 blur-2xl scale-110 animate-pulse" />
+          <div className="absolute inset-0 rounded-full bg-white/20 blur-3xl scale-125 animate-pulse" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.png"
+            src="/Logo.png"
             alt="Terraza Diamante"
-            className="relative h-40 sm:h-52 md:h-64 w-auto object-contain drop-shadow-2xl animate-hero-logo"
+            className="relative w-64 sm:w-80 md:w-96 lg:w-[420px] h-auto object-contain drop-shadow-2xl animate-hero-logo mx-auto"
           />
         </div>
 
         {/* Pill badge */}
-        <div className="mb-5">
+        <div className="mb-8">
           <span className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white border border-white/30 px-5 py-2 rounded-full text-sm font-bold shadow-lg">
             <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -37,13 +37,6 @@ export default function Hero() {
             Santiago de Querétaro
           </span>
         </div>
-
-        {/* Headline */}
-        <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-5 leading-tight drop-shadow-lg">
-          ¡La fiesta perfecta
-          <br />
-          <span className="text-diamante-gold drop-shadow-none">para tus peques!</span>
-        </h1>
 
         {/* Subline */}
         <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-xl mx-auto leading-relaxed">
