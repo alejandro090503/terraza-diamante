@@ -1,31 +1,39 @@
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-diamante-purple via-diamante-pink to-diamante-blue">
-      {/* Soft blurred blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -right-32 w-80 h-80 bg-diamante-gold/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
-        <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-diamante-pink/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+    <section className="relative overflow-hidden">
+      <BackgroundGradientAnimation
+        gradientBackgroundStart="rgb(76, 29, 149)"
+        gradientBackgroundEnd="rgb(45, 10, 100)"
+        firstColor="124, 58, 237"
+        secondColor="236, 72, 153"
+        thirdColor="59, 130, 246"
+        fourthColor="245, 158, 11"
+        fifthColor="167, 139, 250"
+        pointerColor="236, 72, 153"
+        size="75%"
+        blendingValue="hard-light"
+        containerClassName="min-h-screen"
+        className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 pb-20"
+      >
+        {/* Floating decorative emojis */}
+        <div className="pointer-events-none select-none">
+          <div className="absolute top-[18%] left-[4%]   text-5xl animate-float hidden sm:block" style={{ animationDelay: "0.0s" }}>🎉</div>
+          <div className="absolute top-[12%] left-[18%]  text-3xl animate-sparkle hidden sm:block" style={{ animationDelay: "0.3s" }}>✨</div>
+          <div className="absolute top-[28%] right-[5%]  text-6xl animate-float hidden sm:block" style={{ animationDelay: "0.8s" }}>🎈</div>
+          <div className="absolute top-[15%] right-[20%] text-2xl animate-sparkle hidden sm:block" style={{ animationDelay: "1.2s" }}>⭐</div>
+          <div className="absolute top-[45%] left-[3%]   text-4xl animate-float hidden sm:block" style={{ animationDelay: "1.6s" }}>🎁</div>
+          <div className="absolute top-[55%] right-[4%]  text-3xl animate-float hidden sm:block" style={{ animationDelay: "2.0s" }}>🌈</div>
+          <div className="absolute bottom-[32%] left-[10%]  text-5xl animate-float hidden sm:block" style={{ animationDelay: "0.5s" }}>🎀</div>
+          <div className="absolute bottom-[28%] right-[10%] text-4xl animate-sparkle hidden sm:block" style={{ animationDelay: "1.8s" }}>🎊</div>
+          <div className="absolute top-[38%] left-[22%]  text-2xl animate-float hidden lg:block" style={{ animationDelay: "2.2s" }}>💫</div>
+          <div className="absolute top-[60%] right-[22%] text-2xl animate-sparkle hidden lg:block" style={{ animationDelay: "0.9s" }}>🌟</div>
+          <div className="absolute bottom-[40%] left-[2%]  text-3xl animate-float hidden lg:block" style={{ animationDelay: "1.3s" }}>🎠</div>
+          <div className="absolute top-[20%] right-[38%] text-xl animate-sparkle hidden lg:block" style={{ animationDelay: "2.5s" }}>✨</div>
+        </div>
 
-        {/* Floating decorative emojis — varied sizes and positions */}
-        <div className="absolute top-[18%] left-[4%]  text-5xl  animate-float hidden sm:block" style={{ animationDelay: "0.0s" }}>🎉</div>
-        <div className="absolute top-[12%] left-[18%] text-3xl  animate-sparkle hidden sm:block" style={{ animationDelay: "0.3s" }}>✨</div>
-        <div className="absolute top-[28%] right-[5%] text-6xl  animate-float hidden sm:block" style={{ animationDelay: "0.8s" }}>🎈</div>
-        <div className="absolute top-[15%] right-[20%] text-2xl animate-sparkle hidden sm:block" style={{ animationDelay: "1.2s" }}>⭐</div>
-        <div className="absolute top-[45%] left-[3%]  text-4xl  animate-float hidden sm:block" style={{ animationDelay: "1.6s" }}>🎁</div>
-        <div className="absolute top-[55%] right-[4%] text-3xl  animate-float hidden sm:block" style={{ animationDelay: "2.0s" }}>🌈</div>
-        <div className="absolute bottom-[32%] left-[10%] text-5xl animate-float hidden sm:block" style={{ animationDelay: "0.5s" }}>🎀</div>
-        <div className="absolute bottom-[28%] right-[10%] text-4xl animate-sparkle hidden sm:block" style={{ animationDelay: "1.8s" }}>🎊</div>
-        <div className="absolute top-[38%] left-[22%] text-2xl animate-float hidden lg:block" style={{ animationDelay: "2.2s" }}>💫</div>
-        <div className="absolute top-[60%] right-[22%] text-2xl animate-sparkle hidden lg:block" style={{ animationDelay: "0.9s" }}>🌟</div>
-        <div className="absolute bottom-[40%] left-[2%]  text-3xl animate-float hidden lg:block" style={{ animationDelay: "1.3s" }}>🎠</div>
-        <div className="absolute top-[20%] right-[38%] text-xl  animate-sparkle hidden lg:block" style={{ animationDelay: "2.5s" }}>✨</div>
-      </div>
-
-      {/* Content — pt-24 clears the fixed 80px navbar */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center pt-24 pb-16">
-
-        {/* ── LOGO ── centrado, grande, responsivo */}
+        {/* Logo */}
         <div className="mb-10 relative">
           <div className="absolute inset-0 rounded-full bg-white/20 blur-3xl scale-125 animate-pulse" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -39,7 +47,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* H1 visible — keyword principal para SEO */}
+        {/* H1 for SEO */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white text-center leading-tight mb-6 drop-shadow-lg">
           Salón de Fiestas Infantiles
           <br />
@@ -67,7 +75,7 @@ export default function Hero() {
             href="https://wa.me/524421118867?text=Hola%2C%20quiero%20cotizar%20una%20fiesta%20en%20Terraza%20Diamante"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 bg-diamante-gold text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-amber-500 transition-all hover:scale-105 shadow-2xl cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 bg-diamante-gold text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-amber-500 transition-all hover:scale-105 shadow-2xl"
             style={{ boxShadow: "0 8px 24px rgba(245,158,11,0.45)" }}
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -78,13 +86,13 @@ export default function Hero() {
           </a>
           <a
             href="#paquetes"
-            className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white border-2 border-white/40 px-8 py-4 rounded-2xl text-lg font-bold hover:bg-white/30 transition-all hover:scale-105 cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white border-2 border-white/40 px-8 py-4 rounded-2xl text-lg font-bold hover:bg-white/30 transition-all hover:scale-105"
           >
             Ver Paquetes
           </a>
         </div>
 
-        {/* Trust badges — z-20 so the wave never overlaps them */}
+        {/* Trust badges */}
         <div className="relative z-20 mt-12 flex flex-wrap justify-center gap-3">
           {[
             { icon: "👨‍👩‍👧‍👦", text: "Hasta 100 personas" },
@@ -100,10 +108,10 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </div>
+      </BackgroundGradientAnimation>
 
-      {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
+      {/* Wave divider — sits on top of the animation */}
+      <div className="absolute bottom-0 left-0 right-0 z-20">
         <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path
             d="M0 100L60 91C120 82 240 64 360 58C480 52 600 58 720 62C840 66 960 68 1080 72C1200 76 1320 80 1380 82L1440 84V100H0Z"

@@ -11,6 +11,20 @@
   --font-body: var(--font-nunito);
 }
 
+/* Default values for gradient animation CSS vars (prevents flash of white) */
+:root {
+  --gradient-background-start: rgb(76, 29, 149);
+  --gradient-background-end: rgb(45, 10, 100);
+  --first-color: 124, 58, 237;
+  --second-color: 236, 72, 153;
+  --third-color: 59, 130, 246;
+  --fourth-color: 245, 158, 11;
+  --fifth-color: 167, 139, 250;
+  --pointer-color: 236, 72, 153;
+  --size: 75%;
+  --blending-value: hard-light;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -64,3 +78,41 @@ html {
 .animate-hero-logo {
   animation: heroLogoFloat 4s ease-in-out infinite;
 }
+
+/* ── Background Gradient Animation (aceternity) ── */
+@keyframes gradient-first {
+  0%   { transform: translateX(-50%) translateY(-10%); }
+  33%  { transform: translateX(-10%) translateY(10%); }
+  66%  { transform: translateX(10%)  translateY(-10%); }
+  100% { transform: translateX(-50%) translateY(-10%); }
+}
+@keyframes gradient-second {
+  0%   { transform: translateX(-50%) translateY(-10%) rotate(-5deg); }
+  33%  { transform: translateX(10%)  translateY(10%)  rotate(10deg); }
+  66%  { transform: translateX(-10%) translateY(-10%) rotate(5deg); }
+  100% { transform: translateX(-50%) translateY(-10%) rotate(-5deg); }
+}
+@keyframes gradient-third {
+  0%   { transform: translateX(-50%) translateY(10%); }
+  33%  { transform: translateX(10%)  translateY(-10%); }
+  66%  { transform: translateX(-10%) translateY(10%); }
+  100% { transform: translateX(-50%) translateY(10%); }
+}
+@keyframes gradient-fourth {
+  0%   { transform: translateX(-50%) translateY(-10%) rotate(10deg); }
+  33%  { transform: translateX(10%)  translateY(10%)  rotate(-10deg); }
+  66%  { transform: translateX(-10%) translateY(-10%) rotate(5deg); }
+  100% { transform: translateX(-50%) translateY(-10%) rotate(10deg); }
+}
+@keyframes gradient-fifth {
+  0%   { transform: translateX(-50%) translateY(10%) rotate(-5deg); }
+  33%  { transform: translateX(10%)  translateY(-10%) rotate(10deg); }
+  66%  { transform: translateX(-10%) translateY(10%)  rotate(-5deg); }
+  100% { transform: translateX(-50%) translateY(10%) rotate(-5deg); }
+}
+
+.animate-gradient-first  { animation: gradient-first  18s ease infinite; }
+.animate-gradient-second { animation: gradient-second 20s ease infinite; }
+.animate-gradient-third  { animation: gradient-third  22s ease infinite; }
+.animate-gradient-fourth { animation: gradient-fourth 24s ease infinite; }
+.animate-gradient-fifth  { animation: gradient-fifth  26s ease infinite; }
