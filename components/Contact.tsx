@@ -44,61 +44,71 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div>
-              <h3 className="font-heading text-2xl font-bold text-white mb-6">
+              <h3 className="font-heading text-2xl font-bold text-white mb-6 text-center lg:text-left">
                 Información de contacto
               </h3>
               <div className="space-y-5">
-                <div className="flex items-start gap-4">
-                  <span className="text-2xl">📍</span>
-                  <div>
-                    <p className="text-white font-semibold">Dirección</p>
-                    <p className="text-white/70">
-                      Calle Diamante 6, Col. El Tepetate
-                      <br />
-                      Santiago de Querétaro, Qro.
-                    </p>
+                {[
+                  {
+                    icon: "📍",
+                    label: "Dirección",
+                    content: (
+                      <p className="text-white/70 text-sm">
+                        Calle Diamante 6, Col. El Tepetate
+                        <br />
+                        Santiago de Querétaro, Qro.
+                      </p>
+                    ),
+                  },
+                  {
+                    icon: "📱",
+                    label: "Teléfono",
+                    content: (
+                      <a
+                        href="tel:+524421118867"
+                        className="text-white/70 hover:text-white transition-colors text-sm"
+                      >
+                        +52 442 111 8867
+                      </a>
+                    ),
+                  },
+                  {
+                    icon: "🕐",
+                    label: "Horario",
+                    content: (
+                      <p className="text-white/70 text-sm">
+                        Lun – Vie: 3:00 PM – 11:30 PM
+                        <br />
+                        Sáb – Dom: 7:00 AM – 11:30 PM
+                      </p>
+                    ),
+                  },
+                  {
+                    icon: "💰",
+                    label: "Anticipo para reservar",
+                    content: (
+                      <p className="text-white/70 text-sm">
+                        Solo $1,000 aparta tu fecha
+                        <br />
+                        Saldo restante: 15 días antes
+                      </p>
+                    ),
+                  },
+                ].map(({ icon, label, content }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <span className="w-9 h-9 shrink-0 flex items-center justify-center bg-white/15 rounded-xl text-lg">
+                      {icon}
+                    </span>
+                    <div className="pt-0.5">
+                      <p className="text-white font-semibold text-sm">{label}</p>
+                      {content}
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-2xl">📱</span>
-                  <div>
-                    <p className="text-white font-semibold">Teléfono</p>
-                    <a
-                      href="tel:+524421118867"
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
-                      +52 442 111 8867
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-2xl">🕐</span>
-                  <div>
-                    <p className="text-white font-semibold">Horario</p>
-                    <p className="text-white/70">
-                      Lun – Vie: 3:00 PM – 11:30 PM
-                      <br />
-                      Sáb – Dom: 7:00 AM – 11:30 PM
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-2xl">💰</span>
-                  <div>
-                    <p className="text-white font-semibold">
-                      Anticipo para reservar
-                    </p>
-                    <p className="text-white/70">
-                      Solo $1,000 aparta tu fecha
-                      <br />
-                      Saldo restante: 15 días antes
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -106,7 +116,7 @@ export default function Contact() {
               href="https://wa.me/524421118867?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Terraza%20Diamante"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 transition-all hover:scale-105 shadow-xl"
+              className="flex items-center justify-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 transition-all hover:scale-105 shadow-xl w-full lg:w-auto"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -165,7 +175,7 @@ export default function Contact() {
                   placeholder="442 123 4567"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="fecha"

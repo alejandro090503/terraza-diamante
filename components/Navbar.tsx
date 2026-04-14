@@ -56,7 +56,7 @@ export default function Navbar() {
           <a href="#" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo.png"
+              src="/Logo.png"
               alt="Terraza Diamante"
               className="h-14 w-auto object-contain"
               onError={(e) => {
