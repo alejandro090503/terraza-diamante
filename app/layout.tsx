@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 
@@ -13,9 +13,15 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://terraza-diamante.vercel.app"),
   title: "Terraza Diamante | Salón de Fiestas Infantiles en Querétaro",
   description:
     "El mejor salón para fiestas infantiles en Querétaro. Inflables, sonido, decoración y más. ¡Haz tu fiesta inolvidable!",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

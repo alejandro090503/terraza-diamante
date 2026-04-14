@@ -130,7 +130,7 @@ export default function Packages() {
                 </ul>
 
                 <a
-                  href={`https://wa.me/524421118867?text=Hola%2C%20me%20interesa%20el%20Paquete%20${pkg.name}%20de%20Terraza%20Diamante.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F`}
+                  href={`https://wa.me/524421118867?text=Hola%2C%20me%20interesa%20el%20Paquete%20${encodeURIComponent(pkg.name)}%20de%20Terraza%20Diamante.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full text-center py-3.5 rounded-full font-bold transition-all hover:scale-105 ${

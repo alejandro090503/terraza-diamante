@@ -13,7 +13,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const paqueteText = formData.paquete ? `Paquete: ${formData.paquete}%0A` : "";
+    const paqueteText = formData.paquete ? `Paquete%3A%20${encodeURIComponent(formData.paquete)}%0A` : "";
     const text =
       `Hola%2C%20quiero%20cotizar%20un%20evento%20en%20Terraza%20Diamante%3A%0A%0A` +
       `Nombre%3A%20${encodeURIComponent(formData.nombre)}%0A` +
@@ -136,6 +136,7 @@ export default function Contact() {
                   type="text"
                   id="nombre"
                   required
+                  maxLength={100}
                   value={formData.nombre}
                   onChange={(e) =>
                     setFormData({ ...formData, nombre: e.target.value })
@@ -155,6 +156,7 @@ export default function Contact() {
                   type="tel"
                   id="telefono"
                   required
+                  maxLength={20}
                   value={formData.telefono}
                   onChange={(e) =>
                     setFormData({ ...formData, telefono: e.target.value })
@@ -214,6 +216,7 @@ export default function Contact() {
                 <textarea
                   id="mensaje"
                   rows={3}
+                  maxLength={500}
                   value={formData.mensaje}
                   onChange={(e) =>
                     setFormData({ ...formData, mensaje: e.target.value })

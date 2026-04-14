@@ -37,7 +37,8 @@ export default function MapSection() {
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin"
               title="Ubicación de Terraza Diamante"
             />
           </div>
