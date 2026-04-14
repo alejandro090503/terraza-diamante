@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { GradientCard } from "@/components/ui/gradient-card";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -25,10 +26,8 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contacto"
-      className="py-20 bg-gradient-to-br from-diamante-purple to-diamante-purple-dark"
-    >
+    <section id="contacto">
+      <GradientCard containerClassName="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-4">
@@ -245,6 +244,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      </GradientCard>
     </section>
   );
 }

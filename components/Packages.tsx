@@ -1,4 +1,5 @@
 import AnimateIn from "@/components/AnimateIn";
+import { GradientCard } from "@/components/ui/gradient-card";
 
 const packages = [
   {
@@ -86,10 +87,15 @@ export default function Packages() {
               <div
                 className={`relative rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col ${
                   pkg.popular
-                    ? "bg-gradient-to-br from-diamante-purple to-diamante-pink text-white shadow-2xl scale-105"
+                    ? "text-white shadow-2xl scale-105 overflow-hidden isolate"
                     : "bg-white text-gray-900 shadow-lg border border-gray-100"
                 }`}
               >
+                {/* Animated gradient background — only Diamante card */}
+                {pkg.popular && (
+                  <GradientCard containerClassName="absolute inset-0 rounded-3xl -z-10" />
+                )}
+
                 {pkg.highlight && (
                   <div
                     className={`absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1.5 rounded-full text-sm font-bold shadow-lg ${

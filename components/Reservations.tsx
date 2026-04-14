@@ -1,4 +1,5 @@
 import AnimateIn from "@/components/AnimateIn";
+import { GradientCard } from "@/components/ui/gradient-card";
 
 const steps = [
   {
@@ -77,7 +78,7 @@ export default function Reservations() {
 
         {/* CTA */}
         <AnimateIn delay={200} direction="fade">
-          <div className="bg-gradient-to-r from-diamante-purple to-diamante-pink rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+          <GradientCard containerClassName="rounded-3xl shadow-2xl" className="p-8 md:p-12 text-center text-white">
             <div className="text-5xl mb-4">💎</div>
             <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               ¡Tu fiesta perfecta te espera!
@@ -98,7 +99,7 @@ export default function Reservations() {
               </svg>
               Reservar por WhatsApp
             </a>
-          </div>
+          </GradientCard>
         </AnimateIn>
       </div>
     </section>
