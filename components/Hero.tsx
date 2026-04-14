@@ -6,19 +6,27 @@ export default function Hero() {
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 -right-32 w-80 h-80 bg-diamante-gold/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
         <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-diamante-pink/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-        {/* Floating decorative elements */}
-        <div className="absolute top-1/4 left-[8%] text-4xl animate-float hidden sm:block" style={{ animationDelay: "0.5s" }}>🎉</div>
-        <div className="absolute top-1/3 right-[8%] text-5xl animate-sparkle hidden sm:block">✨</div>
-        <div className="absolute bottom-1/4 left-[15%] text-3xl animate-float hidden sm:block" style={{ animationDelay: "1.5s" }}>🎈</div>
-        <div className="absolute bottom-1/3 right-[12%] text-3xl animate-float hidden sm:block" style={{ animationDelay: "2.5s" }}>⭐</div>
+
+        {/* Floating decorative emojis — varied sizes and positions */}
+        <div className="absolute top-[18%] left-[4%]  text-5xl  animate-float hidden sm:block" style={{ animationDelay: "0.0s" }}>🎉</div>
+        <div className="absolute top-[12%] left-[18%] text-3xl  animate-sparkle hidden sm:block" style={{ animationDelay: "0.3s" }}>✨</div>
+        <div className="absolute top-[28%] right-[5%] text-6xl  animate-float hidden sm:block" style={{ animationDelay: "0.8s" }}>🎈</div>
+        <div className="absolute top-[15%] right-[20%] text-2xl animate-sparkle hidden sm:block" style={{ animationDelay: "1.2s" }}>⭐</div>
+        <div className="absolute top-[45%] left-[3%]  text-4xl  animate-float hidden sm:block" style={{ animationDelay: "1.6s" }}>🎁</div>
+        <div className="absolute top-[55%] right-[4%] text-3xl  animate-float hidden sm:block" style={{ animationDelay: "2.0s" }}>🌈</div>
+        <div className="absolute bottom-[32%] left-[10%] text-5xl animate-float hidden sm:block" style={{ animationDelay: "0.5s" }}>🎀</div>
+        <div className="absolute bottom-[28%] right-[10%] text-4xl animate-sparkle hidden sm:block" style={{ animationDelay: "1.8s" }}>🎊</div>
+        <div className="absolute top-[38%] left-[22%] text-2xl animate-float hidden lg:block" style={{ animationDelay: "2.2s" }}>💫</div>
+        <div className="absolute top-[60%] right-[22%] text-2xl animate-sparkle hidden lg:block" style={{ animationDelay: "0.9s" }}>🌟</div>
+        <div className="absolute bottom-[40%] left-[2%]  text-3xl animate-float hidden lg:block" style={{ animationDelay: "1.3s" }}>🎠</div>
+        <div className="absolute top-[20%] right-[38%] text-xl  animate-sparkle hidden lg:block" style={{ animationDelay: "2.5s" }}>✨</div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+      {/* Content — pt-24 clears the fixed 80px navbar */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center pt-24 pb-16">
 
         {/* ── LOGO ── centrado, grande, responsivo */}
         <div className="mb-10 relative">
-          {/* Glow ring detrás del logo */}
           <div className="absolute inset-0 rounded-full bg-white/20 blur-3xl scale-125 animate-pulse" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -28,7 +36,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* Pill badge */}
+        {/* Location badge */}
         <div className="mb-8">
           <span className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white border border-white/30 px-5 py-2 rounded-full text-sm font-bold shadow-lg">
             <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
@@ -66,8 +74,8 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Trust badges */}
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
+        {/* Trust badges — z-20 so the wave never overlaps them */}
+        <div className="relative z-20 mt-12 flex flex-wrap justify-center gap-3">
           {[
             { icon: "👨‍👩‍👧‍👦", text: "Hasta 100 personas" },
             { icon: "🎪", text: "Inflables incluidos" },
@@ -75,9 +83,9 @@ export default function Hero() {
           ].map(({ icon, text }) => (
             <div
               key={text}
-              className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-semibold"
+              className="flex items-center gap-2 bg-white/30 backdrop-blur-md border border-white/50 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg"
             >
-              <span>{icon}</span>
+              <span className="text-base">{icon}</span>
               <span>{text}</span>
             </div>
           ))}
@@ -85,7 +93,7 @@ export default function Hero() {
       </div>
 
       {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0 z-10">
         <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path
             d="M0 100L60 91C120 82 240 64 360 58C480 52 600 58 720 62C840 66 960 68 1080 72C1200 76 1320 80 1380 82L1440 84V100H0Z"
