@@ -4,52 +4,36 @@ import AnimateIn from "@/components/AnimateIn";
 
 const reviews = [
   {
-    name: "Claudia Hernández",
-    initials: "CH",
+    name: "Isabel Goretti",
+    initials: "IG",
     color: "bg-purple-500",
     stars: 5,
     date: "hace 1 semana",
-    text: "Excelente lugar para eventos. El espacio es muy amplio y limpio, el mobiliario de calidad y la atención muy amable. Mi cumpleaños quedó precioso. ¡100% recomendable!",
+    text: "Muy buen trato con Alex, muy recomendable ✨ Gracias por hacer de mi boda algo espectacular 😊",
   },
   {
-    name: "Roberto Sánchez",
-    initials: "RS",
+    name: "Pamela Sue Martin",
+    initials: "PM",
     color: "bg-blue-500",
     stars: 5,
-    date: "hace 3 semanas",
-    text: "Rentamos para la fiesta de 15 años de mi hija y quedamos encantados. La terraza es hermosa, buen espacio y el acceso para el servicio de comida fue muy sencillo.",
+    date: "hace 2 semanas",
+    text: "Excelente ubicación, y buen trato por parte de Alejandro. Muy recomendable. Todo muy bien.",
   },
   {
-    name: "Lupita Morales",
-    initials: "LM",
+    name: "Albanely Rivera Ledesma",
+    initials: "AR",
     color: "bg-pink-500",
     stars: 5,
     date: "hace 1 mes",
-    text: "Nos encantó que dejaron instalar la decoración el día anterior, eso facilitó mucho todo. El inflable de los niños fue un éxito total. ¡Volvemos el próximo año!",
+    text: "Muy bonito lugar, lo recomiendo ampliamente para tus fiestas o reuniones.",
   },
   {
-    name: "Jorge Peña",
-    initials: "JP",
-    color: "bg-green-600",
-    stars: 5,
-    date: "hace 2 meses",
-    text: "Muy buena ubicación y excelente atención. Apartar la fecha fue muy fácil con el anticipo de $1,000. El espacio es versátil y se adapta a cualquier tipo de evento.",
-  },
-  {
-    name: "Diana Castro",
-    initials: "DC",
-    color: "bg-orange-500",
-    stars: 5,
-    date: "hace 2 meses",
-    text: "Hicimos el cumpleaños de mi mamá aquí y salió todo perfecto. El espacio techado fue fundamental porque llovió y no hubo ningún problema. ¡Muy recomendado!",
-  },
-  {
-    name: "Mariana López",
-    initials: "ML",
+    name: "Cristina Daniela Velázquez",
+    initials: "CV",
     color: "bg-rose-500",
     stars: 5,
-    date: "hace 3 meses",
-    text: "Organizamos el bautizo de mi hijo aquí y todo salió espectacular. El mobiliario muy limpio, los cubremanteles exactamente del color que pedimos. Super contenta.",
+    date: "hace 1 mes",
+    text: "Muy buen servicio.",
   },
 ];
 
@@ -120,7 +104,7 @@ export default function Reviews() {
                 <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
               </svg>
               <span className="text-sm font-semibold text-gray-700">
-                5.0 ★★★★★ en Google Maps
+                4.6 ★★★★☆ en Google Maps
               </span>
             </div>
           </div>
