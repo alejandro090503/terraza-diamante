@@ -1,0 +1,3 @@
+[submodule ".claude/skills/claude-seo"]
+	path = .claude/skills/claude-seo
+	url = https://github.com/skills-sh/claude-seo
