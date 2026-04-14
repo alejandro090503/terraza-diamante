@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://terraza-diamante.vercel.app/sitemap.xml

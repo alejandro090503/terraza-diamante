@@ -10,19 +10,19 @@ type MediaItem = {
 };
 
 const galleryItems: MediaItem[] = [
-  { type: "video",  src: "/gallery/video1.mp4",  aspect: "portrait" },
-  { type: "image",  src: "/gallery/foto5.jpg",   aspect: "landscape" },
-  { type: "image",  src: "/gallery/foto6.jpg",   aspect: "landscape" },
-  { type: "video",  src: "/gallery/video2.mp4",  aspect: "portrait" },
-  { type: "image",  src: "/gallery/foto1.jpg",   aspect: "portrait" },
-  { type: "image",  src: "/gallery/foto2.jpg",   aspect: "landscape" },
-  { type: "image",  src: "/gallery/foto7.jpg",   aspect: "landscape" },
-  { type: "video",  src: "/gallery/video3.mp4",  aspect: "portrait" },
-  { type: "image",  src: "/gallery/foto3.jpg",   aspect: "portrait" },
-  { type: "image",  src: "/gallery/foto8.jpg",   aspect: "landscape" },
-  { type: "image",  src: "/gallery/foto9.jpg",   aspect: "landscape" },
-  { type: "image",  src: "/gallery/foto4.jpg",   aspect: "portrait" },
-  { type: "image",  src: "/gallery/foto10.jpg",  aspect: "landscape" },
+  { type: "video",  src: "/gallery/video1.mp4",  aspect: "portrait",  title: "Video de evento en Terraza Diamante Querétaro" },
+  { type: "image",  src: "/gallery/foto5.jpg",   aspect: "landscape", title: "Decoración de fiesta infantil en Terraza Diamante" },
+  { type: "image",  src: "/gallery/foto6.jpg",   aspect: "landscape", title: "Salón de fiestas con inflable en Querétaro" },
+  { type: "video",  src: "/gallery/video2.mp4",  aspect: "portrait",  title: "Celebración de cumpleaños en Terraza Diamante" },
+  { type: "image",  src: "/gallery/foto1.jpg",   aspect: "portrait",  title: "Terraza techada para eventos en Querétaro" },
+  { type: "image",  src: "/gallery/foto2.jpg",   aspect: "landscape", title: "Mobiliario y decoración de XV años en Terraza Diamante" },
+  { type: "image",  src: "/gallery/foto7.jpg",   aspect: "landscape", title: "Fiesta familiar con decoración temática en Querétaro" },
+  { type: "video",  src: "/gallery/video3.mp4",  aspect: "portrait",  title: "Video de celebración en Terraza Diamante" },
+  { type: "image",  src: "/gallery/foto3.jpg",   aspect: "portrait",  title: "Inflable para niños en salón de fiestas Querétaro" },
+  { type: "image",  src: "/gallery/foto8.jpg",   aspect: "landscape", title: "Montaje de mesas y mantelería en Terraza Diamante" },
+  { type: "image",  src: "/gallery/foto9.jpg",   aspect: "landscape", title: "Baby shower con decoración en Terraza Diamante Querétaro" },
+  { type: "image",  src: "/gallery/foto4.jpg",   aspect: "portrait",  title: "Graduación celebrada en Terraza Diamante Querétaro" },
+  { type: "image",  src: "/gallery/foto10.jpg",  aspect: "landscape", title: "Evento social en terraza techada Querétaro" },
 ];
 
 export default function Gallery() {

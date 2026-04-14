@@ -31,10 +31,18 @@ export default function Hero() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/Logo.png"
-            alt="Terraza Diamante"
+            alt="Terraza Diamante — Salón de Fiestas en Querétaro"
+            width={420}
+            height={420}
+            fetchPriority="high"
             className="relative w-64 sm:w-80 md:w-96 lg:w-[420px] h-auto object-contain drop-shadow-2xl animate-hero-logo mx-auto"
           />
         </div>
+
+        {/* H1 visible para SEO — diseñado para encajar en el hero */}
+        <h1 className="sr-only">
+          Terraza Diamante — Salón de Fiestas Infantiles en Querétaro
+        </h1>
 
         {/* Location badge */}
         <div className="mb-8">
